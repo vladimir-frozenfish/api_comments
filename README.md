@@ -45,3 +45,11 @@ python3 manage.py migrate
 python3 manage.py runserver
 ```
 
+## URLS проекта:
+### авторизация:
+/api/v1/users/ - регистрация нового пользователя
+/api/v1/users/me/ - получить/обновить текущего пользователя
+/api/v1/jwt/create/ - создать JWT-токен
+/api/v1/jwt/refresh/ - обновить JWT-токен
+
+
