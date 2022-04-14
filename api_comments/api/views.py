@@ -36,3 +36,17 @@ class CommentViewSet(viewsets.ModelViewSet):
         post = get_object_or_404(Post, id=post_id)
         serializer.save(author=self.request.user, post=post)
 
+
+class ChildrenCommentViewSet(viewsets.ModelViewSet):
+    pass
+    '''
+    serializer_class = CommentSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly,
+                          IsAuthorOrReadOnly]
+
+    def perform_create(self, serializer):
+        post_id = self.kwargs.get("post_id")
+        post = get_object_or_404(Post, id=post_id)
+        serializer.save(author=self.request.user, post=post)
+    '''
+

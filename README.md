@@ -52,4 +52,11 @@ python3 manage.py runserver
 /api/v1/jwt/create/ - создать JWT-токен
 /api/v1/jwt/refresh/ - обновить JWT-токен
 
+### посты
+/api/v1/post/ - GET, POST
+/api/v1/post/{post_id}/ - GET, PUT, PATCH, DELETE
+
+### комментарии
+/api/v1/post/{post_id}/comments/ - GET, POST 
+
 

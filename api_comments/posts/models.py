@@ -26,6 +26,10 @@ class Comment(models.Model):
     text = models.TextField()
     created = models.DateTimeField(
         'Дата добавления', auto_now_add=True, db_index=True)
+    parent = models.ForeignKey(
+        'self', verbose_name='Родитель', on_delete=models.SET_NULL,
+        blank=True, null=True, related_name='children'
+    )
 
     class Meta:
         verbose_name_plural = 'Комментарии'
