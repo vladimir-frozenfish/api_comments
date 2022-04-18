@@ -58,5 +58,6 @@ python3 manage.py runserver
 
 ### комментарии
 /api/v1/post/{post_id}/comments/ - GET, POST 
+/api/v1/post/{post_id}/comments/{comment_id}/comment/ - POST
 
 
